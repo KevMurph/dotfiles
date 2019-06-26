@@ -43,7 +43,7 @@ brew install git tmux neofetch youtube-dl wireshark tree sl inetutils
 brew cask install \
 google-chrome fantastical keeweb google-drive-file-stream \
 private-internet-access vlc discord obs handbrake synergy \
-sublime-text dash docker \
+sublime-text dash docker appcleaner openemu \
 marshallofsound-google-play-music-player virtualbox rocket
 
 echo "Generating an RSA token for GitHub"
