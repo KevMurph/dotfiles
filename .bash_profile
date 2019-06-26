@@ -1,0 +1,1 @@
+alias :wq="echo You\'re not in vim..."
