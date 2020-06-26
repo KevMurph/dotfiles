@@ -47,14 +47,6 @@ sublime-text lepton docker appcleaner openemu \
 marshallofsound-google-play-music-player virtualbox \
 background-music devdocs
 
-echo "Generating an RSA token for GitHub"
-mkdir -p ~/.ssh
-ssh-keygen -t rsa -b 4096 -C "kevinsmurphy2014@gmail.com"
-echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
-eval "$(ssh-agent -s)"
-echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
-
-echo "cloning dotfiles"
 git clone git@github.com:KevMurph/dotfiles.git "${HOME}/dotfiles"
 
 ln -s "${HOME}/dotfiles/.bash_profile" "${HOME}/.bash_profile"
