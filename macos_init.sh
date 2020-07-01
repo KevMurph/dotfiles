@@ -41,7 +41,7 @@ echo "brew installing utilities and programs"
 brew install git tmux neofetch youtube-dl wireshark tree sl inetutils
 
 brew cask install \
-google-chrome fantastical keeweb google-drive-file-stream \
+google-chrome fantastical keeweb google-backup-and-sync \
 private-internet-access vlc discord obs handbrake synergy \
 sublime-text lepton docker appcleaner openemu \
 marshallofsound-google-play-music-player virtualbox \
@@ -56,6 +56,9 @@ echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
 echo "making system modifications:"
 # Make Chrome Two finger swipe for back and forward
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
+
+# Disable recent entries on dock
+defaults write com.apple.dock show-recents -boolean false
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
